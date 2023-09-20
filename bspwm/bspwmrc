@@ -2,7 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 
-bspc monitor -d I II III IV V
+bspc monitor -d      
 
 $HOME/.config/polybar/launch.sh 
 killall picom
