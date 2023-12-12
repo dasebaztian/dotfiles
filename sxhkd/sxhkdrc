@@ -7,8 +7,12 @@ super + Return
 	kitty
 # program launcher
 super + @space
-	rofi -show run
+	rofi -show drun
 
+alt + Tab
+	rofi -show window
+super + shift + @space
+	rofi -show combi
 #Custom Launchers Apps
 super + s
 	google-chrome
@@ -16,8 +20,9 @@ super + s
 super + f
 	nautilus
 super + z
-	feh --bg-fill --randomize '/home/dasebaztian/Wallpapers'	
-	
+	feh --bg-fill --randomize '/home/dasebaztian/dotfiles/Wallpapers'	
+super + v
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
 
@@ -39,10 +44,9 @@ XF86MonBrightness{Up,Down}
 super + p
 	rofi -show power-menu -modi power-menu:rofi-power-menu  
 
-XF86Display
-	/usr/bin/monitor_layout
-
-
+super + l
+	slock
+	
 super + Print
 	flameshot full -d 1000 -p $HOME/Screenshots/
 
@@ -149,15 +153,12 @@ super + ctrl + shift + space
 
 # expand a window by moving one of its side outward
 #super + alt + {h,j,k,l}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
 #super + alt + shift + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 #custom move/resize
 alt + super + {Left,Down,Up,Right}
 	~/.config/bspwm/bspwm_resize {west,south,north,east}
-# move a floating window
-super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}

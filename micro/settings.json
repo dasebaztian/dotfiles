@@ -1,0 +1,8 @@
+{
+    "colorscheme": "simple",
+    "scrollbar": true,
+    "softwrap": true,
+    "statusformatl": "$(filename) $(modified)($(line),$(col)) | ft:$(opt:filetype) |",
+    "statusformatr": "$(bind:ToggleKeyMenu): bindings",
+    "tabhighlight": true
+}
