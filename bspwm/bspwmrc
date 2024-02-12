@@ -6,30 +6,33 @@ bspc monitor eDP -d    
 INTERNAL_OUTPUT="eDP1"
 EXTERNAL_OUTPUT="HDMI-A-0"
 
-xrandr |grep $EXTERNAL_OUTPUT | grep " connected "
+xrandr | grep $EXTERNAL_OUTPUT | grep " connected "
 if [ $? -eq 0 ]; then
-    xrandr --output eDP --auto --output HDMI-A-0 --auto --same-as eDP 
+    xrandr --output eDP --mode 1920x1080 --output HDMI-A-0 --mode 1440x900 --scale-from 1920x1080 --same-as eDP
     bspc monitor $INTERNAL_OUTPUT -d     
     bspc monitor $INTERNAL_OUTPUT -d     
 else
     xrandr --output $INTERNAL_OUTPUT --auto --output $EXTERNAL_OUTPUT --off
     bspc monitor $INTERNAL_OUTPUT -d     
 fi
-
+killall nm-applet
+killall polybar
+killall blueman
+killall feh
+killall picom
 $HOME/.config/polybar/launch.sh &
 $HOME/.config/fehinit.sh &
-$HOME/.config/micmutelightoff &	
-killall picom 
+$HOME/dotfiles/micmutelightoff &	
 picom --config $HOME/.config/picom/picom.conf &
-killall nm-applet
 nm-applet &
 blueman-applet & 
 greenclip daemon &
-bspc config top_padding        30
+dunst -config $HOME/.config/dunst/dunstrc &
+bspc config top_padding        37
 bspc config bottom_padding     5
 bspc config left_padding       0
 bspc config right_padding      0
-bspc config border_width         2
+bspc config border_width         1
 bspc config window_gap          10
 
 bspc config split_ratio          0.50
@@ -54,5 +57,6 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 bspc config focus_follows_pointer true
+xsetroot -cursor_name left_ptr
 
 

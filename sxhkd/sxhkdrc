@@ -9,20 +9,28 @@ super + Return
 super + @space
 	rofi -show drun
 
+super + c
+	rofi -show calc -modi calc -no-show-match -no-sort
 alt + Tab
 	rofi -show window
 super + shift + @space
-	rofi -show combi
+	rofi -show run
 #Custom Launchers Apps
 super + s
 	google-chrome
 
 super + f
-	nautilus
+	kitty lf -config /home/dasebaztian/.config/lf/lfrc
+
+super + e 
+	kitty micro	
 super + z
 	feh --bg-fill --randomize '/home/dasebaztian/dotfiles/Wallpapers'	
 super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+
+super + n
+	anytype
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
 
@@ -42,7 +50,7 @@ XF86MonBrightness{Up,Down}
   brightnessctl set 5{+,-}  	      
   
 super + p
-	rofi -show power-menu -modi power-menu:rofi-power-menu  
+	/usr/bin/rofi-power-menu
 
 super + l
 	slock
@@ -106,8 +114,8 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+super + shift + c
+	bspc node -f next.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
