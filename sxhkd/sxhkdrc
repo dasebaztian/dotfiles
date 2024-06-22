@@ -6,31 +6,33 @@
 super + Return
 	kitty
 # program launcher
+
 super + @space
 	rofi -show drun
 
 super + c
 	rofi -show calc -modi calc -no-show-match -no-sort
+	
 alt + Tab
 	rofi -show window
+	
 super + shift + @space
 	rofi -show run
 #Custom Launchers Apps
+
 super + s
-	google-chrome
+	microsoft-edge
 
 super + f
-	kitty lf -config /home/dasebaztian/.config/lf/lfrc
+	kitty yazi
 
 super + e 
-	kitty micro	
+	emacs
 super + z
-	feh --bg-fill --randomize '/home/dasebaztian/dotfiles/Wallpapers'	
+	feh --bg-fill --randomize '/home/dasebaztian/Wallpapers'	
 super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
-
-super + n
-	anytype
+	
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
 
@@ -50,7 +52,7 @@ XF86MonBrightness{Up,Down}
   brightnessctl set 5{+,-}  	      
   
 super + p
-	/usr/bin/rofi-power-menu
+	rofi -show p -modi p:'/home/dasebaztian/.config/powermenu.sh --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono NF 16"
 
 super + l
 	slock
@@ -160,13 +162,13 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-#super + alt + {h,j,k,l}
-#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+super + alt + {Left,Down,Up,Right}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
 #super + alt + shift + {h,j,k,l}
 #	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 #custom move/resize
-alt + super + {Left,Down,Up,Right}
-	~/.config/bspwm/bspwm_resize {west,south,north,east}
+#alt + super + {Left,Down,Up,Right}
+#	/home/dasebaztian/.config/bspwm/bspwm_resize {west,south,north,east}

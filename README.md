@@ -1,1 +1,1 @@
-Literalmente los dotfiles de mi entorno y teclado 
+Literalmente mis dotfiles de linux
