@@ -21,17 +21,16 @@ super + shift + @space
 #Custom Launchers Apps
 
 super + s
-	microsoft-edge
+	firefox
 
 super + f
 	kitty yazi
-
-super + e 
-	emacs
 super + z
 	feh --bg-fill --randomize '/home/dasebaztian/Wallpapers'	
 super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
+super + e
+      	emacs
 	
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
