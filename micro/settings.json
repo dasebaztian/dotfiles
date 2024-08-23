@@ -1,1 +1,5 @@
-{}
+{
+    "basename": true,
+    "softwrap": true,
+    "xterm": true
+}

@@ -2,8 +2,7 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 bspc config merge_overlapping_monitors    true
-bspc monitor eDP -d     
-
+bspc monitor eDP -d 1 2 3 4 
 killall nm-applet
 killall polybar
 killall blueman

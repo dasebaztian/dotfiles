@@ -20,17 +20,20 @@ super + shift + @space
 	rofi -show run
 #Custom Launchers Apps
 
+
 super + s
 	firefox
-
 super + f
 	kitty yazi
 super + z
 	feh --bg-fill --randomize '/home/dasebaztian/Wallpapers'	
+	
 super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 super + e
-      	emacs
+      	kitty micro
+super + n
+	obsidian      	
 	
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +1000
@@ -51,7 +54,7 @@ XF86MonBrightness{Up,Down}
   brightnessctl set 5{+,-}  	      
   
 super + p
-	rofi -show p -modi p:'/home/dasebaztian/.config/powermenu.sh --symbols-font "Symbols Nerd Font Mono"' -font "JetBrains Mono NF 16"
+	/home/sebastian/.config/bin/powermenu
 
 super + l
 	slock
