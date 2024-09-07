@@ -1,5 +1,3 @@
 {
-    "basename": true,
-    "softwrap": true,
-    "xterm": true
+    "colorscheme": "simple"
 }

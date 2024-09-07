@@ -1,0 +1,9 @@
+
+if [ $background = dark ]; then
+  sed -i s/Adwaita/Adwaita-dark/ ~/.xsettingsd
+else
+  sed -i s/Adwaita-dark/Adwaita/ ~/.xsettingsd
+fi
+
+kitty +kitten themes --reload-in=all light
+

@@ -1,0 +1,59 @@
+term xterm-256color
+background_opacity 0.98
+
+# font configurations
+font_family       JetBrainsMono Nerd Font 
+font_size 	  15.0
+bold_font         auto
+italic_font       auto
+bold_italic_font  auto
+disable_ligatures never
+
+repaint_delay 7
+sync_to_monitor yes
+
+# internal border
+window_padding_width 16
+
+# scroll with mouse
+scroll_on_mouse_wheel yes
+scroll_lines 3
+
+
+
+# tab bar
+tab_bar_edge bottom bottom
+tab_powerline_style angled
+tab_bar_align left
+tab_bar_style powerline
+tab_powerline_style round
+# active_tab_foreground #2E3440
+# active_tab_background #81A1C1
+active_tab_font_style bold
+# inactive_tab_background #3B4252
+# inactive_tab_foreground #2E3440
+inactive_tab_font_style italic
+
+# keybindings
+enabled_layouts *
+map ctrl+alt+q  goto_layout tall 
+map ctrl+alt+w  goto_layout stack
+map ctrl+shift+left neighboring_window left
+map ctrl+shift+right neighboring_window right
+map ctrl+shift+up neighboring_window up
+map ctrl+shift+down neighboring_window down
+
+map ctrl+t new_tab_with_cwd
+
+map ctrl+alt+j change_font_size all -1
+map ctrl+alt+k change_font_size all +1
+map ctrl+alt+up change_font_size all +1
+map ctrl+alt+down change_font_size all -1
+
+map ctrl+Up move_to_start
+map ctrl+Down move_to_end
+
+# BEGIN_KITTY_THEME
+# Light
+include current-theme.conf
+# END_KITTY_THEME
