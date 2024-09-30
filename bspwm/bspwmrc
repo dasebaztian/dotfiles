@@ -16,12 +16,12 @@ blueman-applet &
 greenclip daemon &
 dunst -config $HOME/.config/dunst/dunstrc &
 sudo echo 0 | sudo tee /sys/class/leds/platform\:\:micmute/brightness
-bspc config top_padding        55
-bspc config bottom_padding     10
-bspc config left_padding       10
-bspc config right_padding      10
+bspc config top_padding        15
+bspc config bottom_padding     48
+bspc config left_padding       15
+bspc config right_padding      15
 bspc config border_width       0
-bspc config window_gap         8
+bspc config window_gap         15
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
@@ -46,5 +46,7 @@ bspc rule -a Screenkey manage=off
 
 bspc config focus_follows_pointer true
 xsetroot -cursor_name left_ptr
-xinput set-prop 'SynPS/2 Synaptics TouchPad' 298 1 
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 304 1 
+xinput set-prop 'SynPS/2 Synaptics TouchPad' 303 1 
 export _JAVA_AWT_WM_NONREPARENTING=1
+XDG_DOWNLOAD_DIR="$HOME/Descargas"

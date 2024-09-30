@@ -23,7 +23,7 @@ super + shift + @space
 #Custom Launchers Apps
 
 super + p
-	/home/dasebaztian/.config/bin/powermenu
+	/home/sebastian/.config/bin/powermenu
 super + s
 	firefox
 super + f
@@ -176,4 +176,4 @@ super + ctrl + shift + space
 
 custom move/resize
 super + alt + {Left,Down,Up,Right}
-	/home/dasebaztian/.config/bspwm/bspwm_resize {west,south,north,east}
+	/home/sebastian/.config/bspwm/bspwm_resize {west,south,north,east}
